@@ -25,13 +25,23 @@
  * THE SOFTWARE.
  */
 
-namespace Academe\Service;
+namespace Site\Page;
 
-class Admission
+use Zend\Expressive\Template\TemplateRendererInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Zend\Expressive\Router\RouterInterface;
+use Zend\Diactoros\Response\HtmlResponse;
+use Psr\Http\Message\ResponseInterface;
+
+final class HomePage extends AbstractPage
 {
-
-    public function __construct()
+    public function __construct(RouterInterface $router, TemplateRendererInterface $template = null)
     {
+        parent::__construct($router, $template);
+    }
 
+    public function dispatch(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
+    {
+        return new HtmlResponse($this->template->render("page::home", $this->data));
     }
 }

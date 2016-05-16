@@ -25,13 +25,12 @@
  * THE SOFTWARE.
  */
 
-namespace Academe\Action;
+namespace Site;
 
-class Register
+class Module
 {
-
-    public function __construct()
+    public function __invoke()
     {
-
+        return include __DIR__ . '/../config/module.config.php';
     }
 }

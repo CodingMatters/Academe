@@ -25,13 +25,12 @@
  * THE SOFTWARE.
  */
 
-namespace Academe\Service;
+use Zend\Expressive\ConfigManager\ConfigManager;
 
-class Report
-{
+$modules = [
+    Site\Module::class,
+];
 
-    public function __construct()
-    {
+$module_config = (new ConfigManager($modules))->getMergedConfig();
 
-    }
-}
+return $module_config;

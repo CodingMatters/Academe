@@ -14,11 +14,21 @@ return [
         'invokables' => [
             // Fully\Qualified\InterfaceName::class => Fully\Qualified\ClassName::class,
             Helper\ServerUrlHelper::class => Helper\ServerUrlHelper::class,
+            Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\FastRouteRouter::class,
         ],
         // Use 'factories' for services provided by callbacks/factory classes.
         'factories' => [
             Application::class => ApplicationFactory::class,
             Helper\UrlHelper::class => Helper\UrlHelperFactory::class,
+            
+            Zend\Expressive\FinalHandler::class =>
+                Zend\Expressive\Container\TemplatedErrorHandlerFactory::class,
+
+            Zend\Expressive\Template\TemplateRendererInterface::class =>
+                Zend\Expressive\ZendView\ZendViewRendererFactory::class,
+
+            Zend\View\HelperPluginManager::class =>
+                Zend\Expressive\ZendView\HelperPluginManagerFactory::class,
         ],
     ],
 ];

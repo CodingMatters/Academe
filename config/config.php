@@ -19,6 +19,9 @@ if (is_file($cachedConfigFile)) {
     // Try to load the cached config
     $config = include $cachedConfigFile;
 } else {
+    // Configuration from loaded modules (including vendor)
+    $config = ArrayUtils::merge($config, include __DIR__ . '/modules.php');
+    
     // Load configuration from autoload path
     foreach (Glob::glob('config/autoload/{{,*.}global,{,*.}local}.php', Glob::GLOB_BRACE) as $file) {
         $config = ArrayUtils::merge($config, include $file);

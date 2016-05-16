@@ -25,20 +25,52 @@
  * THE SOFTWARE.
  */
 
-namespace AcademeTest\Action;
+namespace Site\Page;
 
+use Zend\Expressive\Template\TemplateRendererInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Zend\Expressive\Router\RouterInterface;
-use Zend\Diactoros\ServerRequest;
-use Zend\Diactoros\Response;
-use Academe\Action\Admit;
+use Zend\Stratigility\MiddlewareInterface;
+use Psr\Http\Message\ResponseInterface;
 
-class AdmitTest extends \PHPUnit_Framework_TestCase
+abstract class AbstractPage implements MiddlewareInterface
 {
     /** @var RouterInterface */
     protected $router;
-    
-    protected function setUp()
+
+    /** @var TemplateRendererInterface */
+    protected $template;
+
+    protected $data = [];
+
+    public function __construct(RouterInterface $router, TemplateRendererInterface $template = null)
     {
-        $this->router = $this->prophesize(RouterInterface::class);
+        $this->template = $template;
+        $this->router = $router;
     }
+
+    /**
+     *
+     * @param ServerRequestInterface $request
+     * @param ResponseInterface $response
+     * @param null|callable $out
+     * @return null | ResponseInterface
+     */
+    public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $out = null)
+    {
+        return $this->dispatch($request, $response, $out);
+    }
+
+    /**
+     *
+     * @param ServerRequestInterface $request
+     * @param ResponseInterface $response
+     * @param null|callable $next
+     * @return null|ResponseInterface
+     */
+    abstract public function dispatch(
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        callable $next = null
+    );
 }
