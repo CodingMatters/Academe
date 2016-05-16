@@ -1,0 +1,45 @@
+<?php
+    /**
+    * DO NOT CHANGE CURRENT PATH SETTINGS IF NOT FAMILIAR
+    */
+    $logo = $this->basePath("/assets/assets/img/logo.png");
+?>
+
+<div class="headerwrapper">
+    <div class="header-left">
+        <a href="<?php echo $this->url('home'); ?>">
+            LOGO HERE
+        </a>
+        <?php //if($this->zfcUserIdentity()) : ?>
+        <div class="pull-right">
+            <a class="menu-collapse tooltips" data-placement="right"
+               data-toogle="tooltip"
+               title="click to scale menu"
+            >
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <?php //endif; ?>
+    </div>
+    <div class="header-right">
+         <div class="pull-left">
+            <?php 
+//                echo $this->navigation("header")
+//                      ->menu()->setPartial("template/navigation/header");
+            ?>
+        </div>
+        <div class="pull-right">
+            <?php //if($this->zfcUserIdentity()) : ?>
+            <div class="logout-button">
+                <a class="btn btn-toolbar btn-dark tooltips" 
+                    href="<?php //echo $this->url("zfcuser/logout"); ?>"
+                    data-toggle="tooltip" 
+                    data-placement="left" 
+                    title="logout">
+                    <i class="fa fa-sign-out"></i>
+                </a>
+            </div>
+            <?php //endif; ?>
+        </div>
+    </div>
+</div>

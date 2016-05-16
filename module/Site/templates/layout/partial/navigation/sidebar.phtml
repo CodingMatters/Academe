@@ -1,0 +1,26 @@
+<div class="media profile-left">
+    <a class="pull-left profile-thumb tooltips" 
+       href="<?php echo $this->url('home');?>"
+       data-placement="bottom"
+        data-toogle="tooltip"
+        title="view profile"
+    >
+        <img class="img-responsive img-circle"
+             src="<?php //echo $this->zfcUserIdentity()->getAvatar();?>" 
+        >
+    </a>
+    <div class="media-body" style="padding-left: 5px;">
+        <h4 class="media-heading">
+            <?php //echo $this->zfcUserIdentity()->getDisplayName();?>
+        </h4>
+        <small class="text-muted">
+            <?php //echo $this->zfcUserIdentity()->getPosition();?>
+        </small>
+    </div>
+</div>
+<h5 class="leftpanel-title">Navigation</h5>
+<?php
+    //echo $this->navigation("sidebar")
+    //    ->menu()
+    //    ->setPartial("template/navigation/sidebar");
+?>

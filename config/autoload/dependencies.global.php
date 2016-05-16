@@ -1,4 +1,5 @@
 <?php
+
 use Zend\Expressive\Application;
 use Zend\Expressive\Container\ApplicationFactory;
 use Zend\Expressive\Helper;
@@ -14,21 +15,24 @@ return [
         'invokables' => [
             // Fully\Qualified\InterfaceName::class => Fully\Qualified\ClassName::class,
             Helper\ServerUrlHelper::class => Helper\ServerUrlHelper::class,
-            Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\FastRouteRouter::class,
+            Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\ZendRouter::class,
         ],
         // Use 'factories' for services provided by callbacks/factory classes.
         'factories' => [
-            Application::class => ApplicationFactory::class,
-            Helper\UrlHelper::class => Helper\UrlHelperFactory::class,
-            
-            Zend\Expressive\FinalHandler::class =>
-                Zend\Expressive\Container\TemplatedErrorHandlerFactory::class,
-
-            Zend\Expressive\Template\TemplateRendererInterface::class =>
+            Application::class                      => ApplicationFactory::class,            
+            Helper\UrlHelper::class                 => Helper\UrlHelperFactory::class,
+            Helper\ServerUrlMiddleware::class       => Helper\ServerUrlMiddlewareFactory::class,
+            Helper\UrlHelperMiddleware::class       => Helper\UrlHelperMiddlewareFactory::class,     
+            Zend\View\HelperPluginManager::class    => Zend\Expressive\ZendView\HelperPluginManagerFactory::class,
+            Zend\Expressive\FinalHandler::class     => Zend\Expressive\Container\TemplatedErrorHandlerFactory::class,
+            Zend\Expressive\Template\TemplateRendererInterface::class => 
                 Zend\Expressive\ZendView\ZendViewRendererFactory::class,
-
-            Zend\View\HelperPluginManager::class =>
-                Zend\Expressive\ZendView\HelperPluginManagerFactory::class,
+            
         ],
+        'abstract_factories' => [
+//            Zend\Cache\Service\StorageCacheAbstractServiceFactory::class,
+//            Zend\Log\LoggerAbstractServiceFactory::class,
+            Zend\Navigation\Service\NavigationAbstractServiceFactory::class,
+        ]
     ],
 ];
