@@ -8,7 +8,7 @@ $this->plugin('basePath')->setBasePath("/");
 // CSS Stylesheets
 $favicon    = $this->basePath('assets/academe/img/favicon.ico');
 $style      = $this->basePath('assets/site/css/AdminLTE.min.css');
-$override   = $this->basePath('assets/site/css/skin-black-light.min.css');
+$override   = $this->basePath('assets/site/css/skin-blue.min.css');
 $faIcon     = $this->basePath('assets/font-awesome/css/font-awesome.css');
 $bootstrap  = $this->basePath('assets/bootstrap/css/bootstrap.min.css');
 $bsTheme    = $this->basePath('assets/bootstrap/css/bootstrap-theme.min.css');
@@ -19,8 +19,8 @@ $bsJS       = $this->basePath('assets/bootstrap/js/bootstrap.min.js');
 $popover    = $this->basePath('assets/bootstrap/js/popover.js');
 $tooltip    = $this->basePath('assets/bootstrap/js/tooltip.js');
 $tab        = $this->basePath('assets/bootstrap/js/tab.js');
-$holder     = $this->basePath('assets/academe/js/holder.js');
-$custom     = $this->basePath('assets/academe/js/custom.js');
+$app        = $this->basePath('assets/site/js/app.min.js');
+$dashboard  = $this->basePath('assets/site/js/dashboard.js');
 ?>
 
 <?php echo $this->doctype(); ?>
@@ -44,27 +44,47 @@ $custom     = $this->basePath('assets/academe/js/custom.js');
                     ->prependStylesheet($bootstrap)
         ?>
     </head>
-    <body class="hold-transition skin-black sidebar-mini">        
+    <body class="hold-transition skin-blue sidebar-mini">        
         <div class="wrapper">
             <header class="main-header">
              <?php echo $this->partial('partial/navigation/header'); ?>
             </header>
             <aside class="main-sidebar">
-                <?php //echo $this->partial('partial/navigation/sidebar');?>
+                <?php echo $this->partial('partial/navigation/sidebar'); ?>
             </aside>
             <div class="content-wrapper">
-                <?php echo $this->content; ?>
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                  <h1>
+                    Dashboard
+                    <small>Version 2.0</small>
+                  </h1>
+                  <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li class="active">Dashboard</li>
+                  </ol>
+                </section>
+                <section class="content">
+                    <?php echo $this->content; ?>
+                </section>                
             </div>
             <footer class="main-footer">
                 <?php echo $this->partial('template/footer'); ?>                
             </footer>
+            
+            <!-- Control Sidebar -->
+            <!-- /.control-sidebar -->
+            
+            <!-- Add the sidebar's background. This div must be placed
+                immediately after the control sidebar -->
+            <div class="control-sidebar-bg"></div>
         </div>        
         <?php 
             echo $this->inlineScript() //prepend up here
-//                    ->prependFile($custom) 
-//                    ->prependFile($holder)
+                    ->prependFile($dashboard) 
+                    ->prependFile($app)
 //                    ->prependFile($tab)
-//                    ->prependFile($tooltip)
+                    ->prependFile($tooltip)
 //                    ->prependFile($popover)
                     ->prependFile($bsJS)
                     ->prependFile($jquery);
