@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fb81b29a42b2d3d5e5b39af3371a3d03",
+    "hash": "48c9b64cea783e378ef1f5c7b4504f0f",
     "content-hash": "c66eb57f58ec8ddae3fc34ebdd2f5fc0",
     "packages": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodingMatters/Academe_Enrollment.git",
-                "reference": "9ce0b9a8b0802c463d1563fd5ed90a164713f8e9"
+                "reference": "de274073f71d8538a0c0884c74fa249d6e05f92c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodingMatters/Academe_Enrollment/zipball/9ce0b9a8b0802c463d1563fd5ed90a164713f8e9",
-                "reference": "9ce0b9a8b0802c463d1563fd5ed90a164713f8e9",
+                "url": "https://api.github.com/repos/CodingMatters/Academe_Enrollment/zipball/de274073f71d8538a0c0884c74fa249d6e05f92c",
+                "reference": "de274073f71d8538a0c0884c74fa249d6e05f92c",
                 "shasum": ""
             },
             "require": {
@@ -31,16 +31,20 @@
                 "roave/security-advisories": "dev-master"
             },
             "require-dev": {
-                "ghislainf/zf2-whoops": "dev-master",
-                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "filp/whoops": "^2.0",
+                "ocramius/proxy-manager": "^2.0",
                 "phpbench/phpbench": "^0.11",
                 "phpunit/php-invoker": "^1.1",
                 "phpunit/phpunit": "^5.3",
                 "squizlabs/php_codesniffer": "^2.3",
+                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-expressive": "^1.0",
                 "zendframework/zend-expressive-helpers": "^2.0",
-                "zendframework/zend-modulemanager": "^2.5 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.5 || ^3.0"
+                "zendframework/zend-expressive-zendrouter": "^1.0",
+                "zendframework/zend-expressive-zendviewrenderer": "^1.1",
+                "zendframework/zend-i18n-resources": "^2.5",
+                "zendframework/zend-navigation": "^2.7",
+                "zendframework/zend-router": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -73,7 +77,7 @@
             "keywords": [
                 "enrollment"
             ],
-            "time": "2016-05-15 08:45:19"
+            "time": "2016-05-17 04:41:26"
         },
         {
             "name": "codingmatters/academe-faculty",
@@ -81,12 +85,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodingMatters/Academe_Faculty.git",
-                "reference": "f2b42e688a66743bf32ba95a5afd29255947207c"
+                "reference": "13109c097d51e01b49d6e845a220f7a20879deb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodingMatters/Academe_Faculty/zipball/f2b42e688a66743bf32ba95a5afd29255947207c",
-                "reference": "f2b42e688a66743bf32ba95a5afd29255947207c",
+                "url": "https://api.github.com/repos/CodingMatters/Academe_Faculty/zipball/13109c097d51e01b49d6e845a220f7a20879deb9",
+                "reference": "13109c097d51e01b49d6e845a220f7a20879deb9",
                 "shasum": ""
             },
             "require": {
@@ -94,16 +98,20 @@
                 "roave/security-advisories": "dev-master"
             },
             "require-dev": {
-                "ghislainf/zf2-whoops": "dev-master",
-                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "filp/whoops": "^2.0",
+                "ocramius/proxy-manager": "^2.0",
                 "phpbench/phpbench": "^0.11",
                 "phpunit/php-invoker": "^1.1",
                 "phpunit/phpunit": "^5.3",
                 "squizlabs/php_codesniffer": "^2.3",
+                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-expressive": "^1.0",
                 "zendframework/zend-expressive-helpers": "^2.0",
-                "zendframework/zend-modulemanager": "^2.5 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.5 || ^3.0"
+                "zendframework/zend-expressive-zendrouter": "^1.0",
+                "zendframework/zend-expressive-zendviewrenderer": "^1.1",
+                "zendframework/zend-i18n-resources": "^2.5",
+                "zendframework/zend-navigation": "^2.7",
+                "zendframework/zend-router": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -136,7 +144,7 @@
             "keywords": [
                 "academe faculty"
             ],
-            "time": "2016-05-15 08:34:45"
+            "time": "2016-05-17 04:17:11"
         },
         {
             "name": "codingmatters/academe-prospectus",
@@ -144,12 +152,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodingMatters/Academe_Prospectus.git",
-                "reference": "37412ef8448089185e018313e26ce5c9a31f5545"
+                "reference": "bc66eb569733f0f8347233c15d78027d7da93026"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodingMatters/Academe_Prospectus/zipball/37412ef8448089185e018313e26ce5c9a31f5545",
-                "reference": "37412ef8448089185e018313e26ce5c9a31f5545",
+                "url": "https://api.github.com/repos/CodingMatters/Academe_Prospectus/zipball/bc66eb569733f0f8347233c15d78027d7da93026",
+                "reference": "bc66eb569733f0f8347233c15d78027d7da93026",
                 "shasum": ""
             },
             "require": {
@@ -157,16 +165,20 @@
                 "roave/security-advisories": "dev-master"
             },
             "require-dev": {
-                "ghislainf/zf2-whoops": "dev-master",
-                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "filp/whoops": "^2.0",
+                "ocramius/proxy-manager": "^2.0",
                 "phpbench/phpbench": "^0.11",
                 "phpunit/php-invoker": "^1.1",
                 "phpunit/phpunit": "^5.3",
                 "squizlabs/php_codesniffer": "^2.3",
+                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-expressive": "^1.0",
                 "zendframework/zend-expressive-helpers": "^2.0",
-                "zendframework/zend-modulemanager": "^2.5 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.5 || ^3.0"
+                "zendframework/zend-expressive-zendrouter": "^1.0",
+                "zendframework/zend-expressive-zendviewrenderer": "^1.1",
+                "zendframework/zend-i18n-resources": "^2.5",
+                "zendframework/zend-navigation": "^2.7",
+                "zendframework/zend-router": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -199,7 +211,7 @@
             "keywords": [
                 "course prospectus"
             ],
-            "time": "2016-05-15 12:25:31"
+            "time": "2016-05-17 04:01:56"
         },
         {
             "name": "codingmatters/academe-report",
@@ -207,12 +219,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodingMatters/Academe_Report.git",
-                "reference": "380f73b6a76fa439a83d3b33abe8201b8359bff4"
+                "reference": "84bdb399c4f36608e482ff810de52c6db9ed8016"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodingMatters/Academe_Report/zipball/380f73b6a76fa439a83d3b33abe8201b8359bff4",
-                "reference": "380f73b6a76fa439a83d3b33abe8201b8359bff4",
+                "url": "https://api.github.com/repos/CodingMatters/Academe_Report/zipball/84bdb399c4f36608e482ff810de52c6db9ed8016",
+                "reference": "84bdb399c4f36608e482ff810de52c6db9ed8016",
                 "shasum": ""
             },
             "require": {
@@ -220,16 +232,20 @@
                 "roave/security-advisories": "dev-master"
             },
             "require-dev": {
-                "ghislainf/zf2-whoops": "dev-master",
-                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "filp/whoops": "^2.0",
+                "ocramius/proxy-manager": "^2.0",
                 "phpbench/phpbench": "^0.11",
                 "phpunit/php-invoker": "^1.1",
                 "phpunit/phpunit": "^5.3",
                 "squizlabs/php_codesniffer": "^2.3",
+                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-expressive": "^1.0",
                 "zendframework/zend-expressive-helpers": "^2.0",
-                "zendframework/zend-modulemanager": "^2.5 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.5 || ^3.0"
+                "zendframework/zend-expressive-zendrouter": "^1.0",
+                "zendframework/zend-expressive-zendviewrenderer": "^1.1",
+                "zendframework/zend-i18n-resources": "^2.5",
+                "zendframework/zend-navigation": "^2.7",
+                "zendframework/zend-router": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -262,7 +278,7 @@
             "keywords": [
                 "academe report"
             ],
-            "time": "2016-05-15 08:42:20"
+            "time": "2016-05-17 04:27:59"
         },
         {
             "name": "codingmatters/academe-scholarship",
@@ -270,12 +286,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodingMatters/Academe_Scholarship.git",
-                "reference": "c72d23d6c88628b1d012392e5a12f310fadcbe6f"
+                "reference": "1982683976c9aa184537b63fc249579381ec3050"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodingMatters/Academe_Scholarship/zipball/c72d23d6c88628b1d012392e5a12f310fadcbe6f",
-                "reference": "c72d23d6c88628b1d012392e5a12f310fadcbe6f",
+                "url": "https://api.github.com/repos/CodingMatters/Academe_Scholarship/zipball/1982683976c9aa184537b63fc249579381ec3050",
+                "reference": "1982683976c9aa184537b63fc249579381ec3050",
                 "shasum": ""
             },
             "require": {
@@ -283,16 +299,20 @@
                 "roave/security-advisories": "dev-master"
             },
             "require-dev": {
-                "ghislainf/zf2-whoops": "dev-master",
-                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "filp/whoops": "^2.0",
+                "ocramius/proxy-manager": "^2.0",
                 "phpbench/phpbench": "^0.11",
                 "phpunit/php-invoker": "^1.1",
                 "phpunit/phpunit": "^5.3",
                 "squizlabs/php_codesniffer": "^2.3",
+                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-expressive": "^1.0",
                 "zendframework/zend-expressive-helpers": "^2.0",
-                "zendframework/zend-modulemanager": "^2.5 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.5 || ^3.0"
+                "zendframework/zend-expressive-zendrouter": "^1.0",
+                "zendframework/zend-expressive-zendviewrenderer": "^1.1",
+                "zendframework/zend-i18n-resources": "^2.5",
+                "zendframework/zend-navigation": "^2.7",
+                "zendframework/zend-router": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -325,7 +345,7 @@
             "keywords": [
                 "academe scholarship"
             ],
-            "time": "2016-05-15 08:20:18"
+            "time": "2016-05-17 04:36:09"
         },
         {
             "name": "codingmatters/academe-student",
@@ -333,12 +353,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/CodingMatters/Academe_Student.git",
-                "reference": "552689eadd726cbfcc63a536a0629de073db466a"
+                "reference": "1dd82386f51988d195cc9b6237402a3a70291a9a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CodingMatters/Academe_Student/zipball/552689eadd726cbfcc63a536a0629de073db466a",
-                "reference": "552689eadd726cbfcc63a536a0629de073db466a",
+                "url": "https://api.github.com/repos/CodingMatters/Academe_Student/zipball/1dd82386f51988d195cc9b6237402a3a70291a9a",
+                "reference": "1dd82386f51988d195cc9b6237402a3a70291a9a",
                 "shasum": ""
             },
             "require": {
@@ -346,16 +366,20 @@
                 "roave/security-advisories": "dev-master"
             },
             "require-dev": {
-                "ghislainf/zf2-whoops": "dev-master",
-                "ocramius/proxy-manager": "^1.0 || ^2.0",
+                "filp/whoops": "^2.0",
+                "ocramius/proxy-manager": "^2.0",
                 "phpbench/phpbench": "^0.11",
                 "phpunit/php-invoker": "^1.1",
                 "phpunit/phpunit": "^5.3",
                 "squizlabs/php_codesniffer": "^2.3",
+                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-expressive": "^1.0",
                 "zendframework/zend-expressive-helpers": "^2.0",
-                "zendframework/zend-modulemanager": "^2.5 || ^3.0",
-                "zendframework/zend-servicemanager": "^2.5 || ^3.0"
+                "zendframework/zend-expressive-zendrouter": "^1.0",
+                "zendframework/zend-expressive-zendviewrenderer": "^1.1",
+                "zendframework/zend-i18n-resources": "^2.5",
+                "zendframework/zend-navigation": "^2.7",
+                "zendframework/zend-router": "^3.0"
             },
             "type": "library",
             "extra": {
@@ -388,7 +412,7 @@
             "keywords": [
                 "membership"
             ],
-            "time": "2016-05-15 08:31:29"
+            "time": "2016-05-17 04:03:46"
         },
         {
             "name": "container-interop/container-interop",
@@ -2019,30 +2043,31 @@
         },
         {
             "name": "zendframework/zend-modulemanager",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-modulemanager.git",
-                "reference": "a2c3af17bd620028e8478a2e115e06623c4b6400"
+                "reference": "2a59ab9a0dd7699a55050dff659ab0f28272b46e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-modulemanager/zipball/a2c3af17bd620028e8478a2e115e06623c4b6400",
-                "reference": "a2c3af17bd620028e8478a2e115e06623c4b6400",
+                "url": "https://api.github.com/repos/zendframework/zend-modulemanager/zipball/2a59ab9a0dd7699a55050dff659ab0f28272b46e",
+                "reference": "2a59ab9a0dd7699a55050dff659ab0f28272b46e",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.5 || ^7.0",
+                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
                 "zendframework/zend-stdlib": "^2.7 || ^3.0"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "1.7.*",
                 "phpunit/phpunit": "~4.0",
-                "zendframework/zend-config": "^2.6",
                 "zendframework/zend-console": "^2.6",
                 "zendframework/zend-di": "^2.6",
                 "zendframework/zend-loader": "^2.5",
+                "zendframework/zend-mvc": "^2.7",
                 "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3"
             },
             "suggest": {
@@ -2073,7 +2098,7 @@
                 "modulemanager",
                 "zf2"
             ],
-            "time": "2016-02-28 04:45:34"
+            "time": "2016-05-16 21:21:11"
         },
         {
             "name": "zendframework/zend-mvc",
@@ -3972,16 +3997,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.3.6",
+            "version": "1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "2292b116f43c272ff4328083096114f84ea46a56"
+                "reference": "4e8f0da10ac5802913afc151413bc8c53b6c2716"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/2292b116f43c272ff4328083096114f84ea46a56",
-                "reference": "2292b116f43c272ff4328083096114f84ea46a56",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/4e8f0da10ac5802913afc151413bc8c53b6c2716",
+                "reference": "4e8f0da10ac5802913afc151413bc8c53b6c2716",
                 "shasum": ""
             },
             "require": {
@@ -4018,7 +4043,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2016-05-04 07:59:13"
+            "time": "2016-05-17 03:18:57"
         },
         {
             "name": "sebastian/exporter",

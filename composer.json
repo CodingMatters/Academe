@@ -29,7 +29,7 @@
         "codingmatters/academe-student": "dev-master",
         "codingmatters/academe-faculty": "dev-master",
         "codingmatters/academe-report": "dev-master",
-        "codingmatters/academe-scholarship": "dev-master",        
+        "codingmatters/academe-scholarship": "dev-master",
         "codingmatters/academe-enrollment": "dev-master",
         "zendframework/zend-modulemanager": "^2.7",
         "zendframework/zend-serializer": "^2.7",

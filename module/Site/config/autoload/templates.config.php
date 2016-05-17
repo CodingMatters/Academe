@@ -24,7 +24,6 @@ return [
             'error'     => [__DIR__ . '/../../templates/error'],
         ],
     ],
-
     'view_helpers' => [
         // zend-servicemanager-style configuration for adding view helpers:
         // - 'aliases'
@@ -32,5 +31,5 @@ return [
         // - 'factories'
         // - 'abstract_factories'
         // - etc.
-    ],
+    ]
 ];

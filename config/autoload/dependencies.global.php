@@ -27,7 +27,10 @@ return [
             Zend\Expressive\FinalHandler::class     => Zend\Expressive\Container\TemplatedErrorHandlerFactory::class,
             Zend\Expressive\Template\TemplateRendererInterface::class => 
                 Zend\Expressive\ZendView\ZendViewRendererFactory::class,
-            
+            'translator'                => Zend\Mvc\Service\TranslatorServiceFactory::class,
+            'navigation'                => Zend\Navigation\Service\DefaultNavigationFactory::class,
+            'sidebar'                   => Application\Factory\SidebarNavigationFactory::class,
+            'header'                    => Application\Factory\HeaderNavigationFactory::class,            
         ],
         'abstract_factories' => [
 //            Zend\Cache\Service\StorageCacheAbstractServiceFactory::class,

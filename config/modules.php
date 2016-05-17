@@ -29,6 +29,12 @@ use Zend\Expressive\ConfigManager\ConfigManager;
 
 $modules = [
     Site\Module::class,
+    Academe\Prospectus\Module::class,
+    Academe\Student\Module::class,
+    Academe\Faculty\Module::class,
+    Academe\Report\Module::class,
+    Academe\Scholarship\Module::class,
+    Academe\Enrollment\Module::class,
 ];
 
 $module_config = (new ConfigManager($modules))->getMergedConfig();

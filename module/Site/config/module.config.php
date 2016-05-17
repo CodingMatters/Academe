@@ -3,6 +3,7 @@
 $config      = [];
 
 $configFiles = [
+    require __DIR__ . '/autoload/middleware.config.php',
     require __DIR__ . '/autoload/dependencies.config.php',
     require __DIR__ . '/autoload/router.config.php',
     require __DIR__ . '/autoload/navigator.config.php',
