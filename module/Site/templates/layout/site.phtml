@@ -7,8 +7,8 @@ $this->plugin('basePath')->setBasePath("/");
 
 // CSS Stylesheets
 $favicon    = $this->basePath('assets/academe/img/favicon.ico');
-$style      = $this->basePath('assets/academe/css/style.default.css');
-$override   = $this->basePath('assets/academe/css/style.override.css');
+$style      = $this->basePath('assets/site/css/AdminLTE.min.css');
+$override   = $this->basePath('assets/site/css/skin-black-light.min.css');
 $faIcon     = $this->basePath('assets/font-awesome/css/font-awesome.css');
 $bootstrap  = $this->basePath('assets/bootstrap/css/bootstrap.min.css');
 $bsTheme    = $this->basePath('assets/bootstrap/css/bootstrap-theme.min.css');
@@ -29,7 +29,7 @@ $custom     = $this->basePath('assets/academe/js/custom.js');
         <meta charset="utf-8">
         <?php echo $this->headMeta()
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
-            ->appendName('viewport', 'width=device-width, initial-scale=1.0');
+            ->appendName('viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
         ?>
         <?php echo $this->headTitle('Academe System')
             ->setSeparator(' - ')
@@ -44,29 +44,28 @@ $custom     = $this->basePath('assets/academe/js/custom.js');
                     ->prependStylesheet($bootstrap)
         ?>
     </head>
-    <body>         
-        <header>
+    <body class="hold-transition skin-black sidebar-mini">        
+        <div class="wrapper">
+            <header class="main-header">
              <?php echo $this->partial('partial/navigation/header'); ?>
-        </header>
-        <section>
-            <div class="mainwrapper">
-                <div class="leftpanel">
-                    <?php 
-                        echo $this->partial('partial/navigation/sidebar');
-                    ?>
-                </div>
-                <div class="mainpanel">
-                    <?php echo $this->content; ?>
-                </div>
+            </header>
+            <aside class="main-sidebar">
+                <?php //echo $this->partial('partial/navigation/sidebar');?>
+            </aside>
+            <div class="content-wrapper">
+                <?php echo $this->content; ?>
             </div>
-        </section>
+            <footer class="main-footer">
+                <?php echo $this->partial('template/footer'); ?>                
+            </footer>
+        </div>        
         <?php 
             echo $this->inlineScript() //prepend up here
-                    ->prependFile($custom) 
-                    ->prependFile($holder)
-                    ->prependFile($tab)
-                    ->prependFile($tooltip)
-                    ->prependFile($popover)
+//                    ->prependFile($custom) 
+//                    ->prependFile($holder)
+//                    ->prependFile($tab)
+//                    ->prependFile($tooltip)
+//                    ->prependFile($popover)
                     ->prependFile($bsJS)
                     ->prependFile($jquery);
         ?>
